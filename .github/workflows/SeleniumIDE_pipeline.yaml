@@ -1,15 +1,15 @@
-name: Selenium Ide CI
+name: Selenium IDE CI
 on:
   push:
     branches:
-      - main
+      -main
   pull_request:
     branches:
-      - main
+      -main
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -23,4 +23,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Run tests
-      run: dotnet test --verbosity normal
+      run: dotnet test --verbosity-normal
